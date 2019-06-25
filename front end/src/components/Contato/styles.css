@@ -1,0 +1,53 @@
+#title-contato{
+    font-family: 'Muli', cursive;
+    font-size: 30px;
+    color: #343a40; 
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../../images/pcs.jpeg);
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+}
+
+#title-ft{
+    font-family: 'Muli', sans-serif;
+    font-size: 20px;
+    color:#343a40;;
+}
+
+#cont-div{
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+}
+
+h1{
+    text-align: center;
+}
+
+#color-div{
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.7);
+
+}
+
+.btn1{
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+#social{
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+}
+
+#img-social{
+    width: 60px;
+    margin: 20px;
+}

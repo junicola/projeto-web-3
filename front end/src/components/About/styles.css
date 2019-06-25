@@ -1,0 +1,28 @@
+#sobre{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.div-sobre{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title-sobre {
+    font-family: 'Cookie', cursive;
+    font-size: 60px;
+    color: #343a40; 
+}
+
+.icon-img {
+    width: 30px;
+    margin-right: 20px;
+}
+
+li {
+    font-family: 'Muli', sans-serif;
+}

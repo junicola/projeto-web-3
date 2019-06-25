@@ -1,0 +1,37 @@
+#title-home {
+    font-family: 'Cookie', cursive;
+    font-size: 60px;
+    color: white; 
+}
+
+#home{
+    background-image: url(../../images/bg-code.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;  
+    
+}
+#img-profile{
+    width: 300px;
+    border-radius: 50%;
+}
+
+#color{
+    background-image: linear-gradient(rgba(81, 156, 241, 0.541), rgba(227, 126, 240, 0.911));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+
+}
+
+#mini-bio{
+    width: 50%;
+    align-content: center;
+}
+
+p{
+    font-family: 'Muli', sans-serif;
+    color: white;
+    justify-self: center;
+}

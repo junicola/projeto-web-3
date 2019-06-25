@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
+#nav {
+    font-family: 'Muli', sans-serif;
+    font-size: 20px;
+    padding-bottom: 0;
+    padding-top: 0;
+    border-bottom: 0;
+    border-top: 0;
+}
+
+#title{
+    font-family: 'Cookie', cursive;
+    font-size: 40px;
+}
+
+#nav-link{
+    display: flex;
+    
+}
+
+#img-icon {
+    width: 40px;
+    margin-right: 20px;
+}
