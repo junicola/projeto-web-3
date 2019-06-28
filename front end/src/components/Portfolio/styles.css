@@ -21,13 +21,25 @@
 
 #img-port{
     width: 100px;
-    margin: 50px;
     margin-bottom: 10px;
 }
 
 #div-port p{
     color: #343a40;
     text-align: center;
+    font-weight: 100;
+
+}
+
+#div-port a{
+    color: #343a40;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #projs{

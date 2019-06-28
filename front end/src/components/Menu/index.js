@@ -9,14 +9,15 @@ class Menu extends Component {
         return (            
             <Navbar bg="dark" variant="dark" id="nav">
                 <Image src={icon} id="img-icon" />
-                <Navbar.Brand href="#home" id="title">Júlia Nicola Gualeve</Navbar.Brand>
+                <Navbar.Brand href="/#home" id="title">Júlia Nicola Gualeve</Navbar.Brand>
                 <Nav id="nav-link">
-                    <Nav.Link href="#sobre">Sobre</Nav.Link>
-                    <Nav.Link href="#habilidades">Habilidades</Nav.Link>
-                    <Nav.Link href="#blog">Blog</Nav.Link>
-                    <Nav.Link href="#portfolio">Portfólio</Nav.Link>
-                    <Nav.Link href="#biografia">Biografia</Nav.Link>
-                    <Nav.Link href="#form">Contato</Nav.Link>
+                    <Nav.Link href="/#sobre">Sobre</Nav.Link>
+                    <Nav.Link href="/#habilidades">Habilidades</Nav.Link>
+                    <Nav.Link href="/#blog">Blog</Nav.Link>
+                    <Nav.Link href="/#portfolio">Portfólio</Nav.Link>
+                    <Nav.Link href="/#bio">Biografia</Nav.Link>
+                    <Nav.Link href="/#form">Contato</Nav.Link>
+                    <Nav.Link href="/editar">Editar</Nav.Link>
                 </Nav>
             </Navbar>
         );

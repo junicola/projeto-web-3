@@ -34,40 +34,32 @@ class About extends Component {
                     <h1 className="title-sobre">Interesses</h1>
                 </div>
                 <ul>
-                        {this.state.portfolio 
-                            && this.state.portfolio.map(portfolio=>{
-                                return (
-                                    <li key={portfolio._id}> {this.state.portfolio.interesses}
-                                    </li>
-                                );
-                        })}
+                {this.state.portfolio.map(portfolio => portfolio.interesses.map((item, key) => <li key={key}>{item}</li>))}
                 </ul>
+                
 
                 <div className="div-sobre">
                     <Image src={idioma} className="icon-img" />
                     <h1 className="title-sobre">Idiomas</h1>
                 </div>
                 <ul>
-                    <li>Português (Nativo)</li>
-                    <li>Inglês (Avançado)</li>
+                    {this.state.portfolio.map(portfolio => portfolio.idiomas.map((item, key) => <li key={key}>{item}</li>))}
                 </ul>
                 
                 <div className="div-sobre">
                     <Image src={formacao} className="icon-img" />
-                    <h1 class="title-sobre">Formação</h1>                         
+                    <h1 className="title-sobre">Formação</h1>                         
                 </div>
                 <ul>
-                    <li>Ensino Médio -Colégio Bezerra de Menezes, 2015</li>
-                    <li>Cursando Ensino Superior - Universidade Tecnológica Federal do Paraná (2016-2020)</li>
+                  {this.state.portfolio.map(portfolio => portfolio.formacao.map((item, key) => <li key={key}>{item}</li>))}
                 </ul>
                 
                 <div className="div-sobre">
                     <Image src={atv} className="icon-img" />
-                    <h1 class="title-sobre">Atividades Desenvolvidas</h1>
+                    <h1 className="title-sobre">Atividades Desenvolvidas</h1>
                 </div>
                 <ul>
-                    <li>Participação no Grupo ELLP de ensino lúdico de lógica e programação para crianças</li>
-                    <li>Estágio no Setor DIRPPG na UTFPR</li>
+                    {this.state.portfolio.map(portfolio => portfolio.atividades.map((item, key) => <li key={key}>{item}</li>))}
                 </ul>
                 
             </section>

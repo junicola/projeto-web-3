@@ -1,0 +1,51 @@
+#title-edit{
+    font-family: 'Cookie', cursive;
+    font-size: 60px;
+    color: #343a40;
+    padding-top: 20px;
+}
+
+.title-label {
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+Form {
+    font-family: 'Muli', sans-serif;
+    margin: 30px;
+}
+
+#img-edit{
+    width: 40px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+#img-edit-principal{
+    width: 30px;
+    padding-top: 8px;
+    padding-bottom:8px;
+}
+
+#editar p{
+    color: #343a40;
+}
+
+#final {
+    display: flex;
+    flex-direction: row;
+}
+
+#final button {
+    margin: 20px;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #bdbdbd;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+#final button:hover{
+    background-color: rgb(235, 231, 231);
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import api from "../../services/api";
 import { Form, Button, Image } from 'react-bootstrap';
 import "./styles.css";
 import insta from '../../images/insta.png';
@@ -6,6 +7,21 @@ import fb from '../../images/fb.png';
 import git from '../../images/git.png';
 
 class Contato extends Component{
+    state = {
+        portfolio : []
+    };
+    getPortfolioFromApi = () => {
+        api.get("http://localhost:9999/api/portfolio", {
+                crossDomain : true
+            }).then(result => {
+                this.setState({ portfolio: result.data})
+                console.log("Teste::: "+result);
+            });
+    };
+    componentDidMount() {
+        this.getPortfolioFromApi();
+    }
+    
     render(){
         return (
         <section id="form">
@@ -39,20 +55,27 @@ class Contato extends Component{
                     </Form>
                 </div>
                 <h1 id="title-ft">Minhas redes sociais</h1>
-                <div id="social">
-                    <a href="https://instagram.com/junicxsz" target="_blank">
+                {this.state.portfolio.map((item, key) =>
+                    {
+                        return (
+                            <div id="social">
+                    <a key={key} href={item.linkInsta} target="_blank" rel="noopener noreferrer">                      
                         <Image src={insta} id="img-social"/>
                     </a>
-                    <a href="https://facebook.com/junicolagualeve" target="_blank">
+                    <a key={key} href={item.linkFace} target="_blank" rel="noopener noreferrer">                      
                         <Image src={fb} id="img-social"/>
                     </a>
-                </div>
-                <h1 id="title-ft">Meu GitHub</h1>
-                <div id="social">
-                    <a href="https://github.com/junicola" target="_blank">
+                    <a key={key} href={item.linkGit} target="_blank" rel="noopener noreferrer">                      
                         <Image src={git} id="img-social"/>
                     </a>
-                </div>
+                </div>    
+                              
+                        )
+
+                    }
+
+                )}
+                
             </div>            
            
         </section>

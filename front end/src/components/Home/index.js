@@ -1,10 +1,25 @@
 import React, { Component } from 'react';
+import api from "../../services/api";
 import { Image, Button } from 'react-bootstrap';
 import "./styles.css";
 import profile from '../../images/profile.png';
 
 
 class Home extends Component {
+    state = {
+        portfolio : []
+    };
+    getPortfolioFromApi = () => {
+        api.get("http://localhost:9999/api/portfolio", {
+                crossDomain : true
+            }).then(result => {
+                this.setState({ portfolio: result.data})
+                console.log("Teste::: "+result);
+            });
+    };
+    componentDidMount() {
+        this.getPortfolioFromApi();
+    }
     render() {
         return (
             <section id="home">
@@ -12,9 +27,12 @@ class Home extends Component {
                         <h1 id="title-home">Sobre mim</h1>
                         <Image src={profile} id="img-profile" />
                         <div id="mini-bio">
-                            <p>Me chamo Júlia Nicola Gualeve, tenho 21 anos, nasci dia 31 de Outubro (Halloween ♥) na cidade de Marília, localizada no interior do estado de São Paulo. Atualmente moro em Cornélio Procópio, no estado do Paraná e estou cursando
-                            Engenharia de Software na UTFPR.
-                            </p>
+                            {this.state.portfolio &&
+                            this.state.portfolio.map((portfolio,key) => {
+                                return (
+                                    <p key={key}>{portfolio.minibio}</p>
+                                )
+                            })}
                         </div>
                         <a href="../../doc/Currículo.pdf" download>
                             <Button variant="outline-light">CURRÍCULO PDF</Button>
