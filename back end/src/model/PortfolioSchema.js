@@ -4,61 +4,64 @@ const Schema = mongoose.Schema;
 
 const PortfolioSchema = new mongoose.Schema({
     minibio:{
-        type: String,
-        required: true
+        type: String
     },
     foto:{
-        type: String,
-        required: true
+        type: String
     },
     curriculo:{
-        type: String,
-        required: true
+        type: String        
     },
     interesses:{
-        type: [String],
-        required: true
+        type: [String]         
     },
     idiomas:{
-        type: [String],
-        required: true
+        type: [String]         
     },
     formacao:{
-        type: [String],
-        required: true
+        type: [String]         
     },
     atividades:{
-        type: [String],
-        required: true
+        type: [String]         
     },
     habilidades:{
-        type: [String],
-        required: true
+        type: [String]         
     },
     info:{
-        type: String,
-        required: true
+        type: String         
     },
     bio:{
-        type: String,
-        required: true
+        type: String         
     },
-    links:{
-        type: [String],
-        required: true
+    linkInsta:{
+        type: String         
     },
-    nomeProj:{
-        type: String,
-        required: true
+    linkFace:{
+        type: String         
     },
-    dataProj:{
-        type: Date,
-        required: true
-    },
-    descricaoProj:{
-        type: String,
-        required: true
+    linkGit:{
+        type: String         
+    },    
+    projeto:{
+        type: [Map]
     }
 });
 
 module.exports = mongoose.model('Portfolio', PortfolioSchema);
+
+/*nome: {
+    type: String,
+    required: true 
+},
+data:{
+    type: Date,
+    required: true
+},
+descricao: {
+    type: String,
+    required: true
+},
+link:{
+    type: String,
+    required: true
+}*/
